@@ -1,7 +1,26 @@
 import './style.css'
+import 'monaco-editor/esm/vs/editor/editor.all.js';
+
+import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
+
+/*
 import typescriptLogo from './typescript.svg'
 import { setupCounter } from './counter'
+*/
 
+/*
+monaco.editor.create(document.getElementById('app'), {
+  value: "function hello() {\n\talert('Hello world!');\n}",
+  language: 'javascript'
+});
+*/
+
+monaco.editor.create(document.getElementById('container'), {
+  value: "Paste your SuperCollider code here",
+  theme: 'vs-dark',
+});
+
+/*
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -21,3 +40,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+*/
